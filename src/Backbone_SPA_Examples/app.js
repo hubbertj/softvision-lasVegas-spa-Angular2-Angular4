@@ -13,7 +13,7 @@ if (config.sites) {
        var serverStart = require('./server-main.js');
        serverStart.setSettings(sites[i]);
        if(serverStart.startServering()){
-       	    logger.info("Starting Web Sever " + sites[i].name + " on port " + sites[i].port);
+       	    logger.info("Starting Web Sever " + sites[i].name + " on port 127.0.0.1:" + sites[i].port);
        }
     } 
 }

@@ -3,6 +3,9 @@
 	"version": "1.1.0",
 	"private": true,
 	"scripts": {
+		"?info": "Display information about the scripts.",
+		"info": "npm-scripts-info",
+		"?start": "echo Bootstraps the application.",
 		"start": "node app.js"
 	},
 	"dependencies": {
@@ -12,6 +15,7 @@
 		"less": "*",
 		"lodash": "*",
 		"moment": "*",
+		"npm-scripts-info": "^0.3.6",
 		"restler": "*",
 		"winston": "^0.5.10"
 	}
