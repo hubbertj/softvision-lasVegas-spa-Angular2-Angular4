@@ -1,0 +1,100 @@
+@import "./tools";
+div#slotview-page {
+    max-width: @siteMaxWidth;
+    margin: 40px auto 0 auto;
+    div.machine-view-wrapper {
+        padding: 50px 100px 50px 100px;
+        background: @color-secondary-2-3;
+        border: 1px solid black;
+        border-radius: 20px;
+        div.machine-view-content {
+            position: relative;
+            background-color: black;
+            min-height: 400px;
+            border-radius: 20px;
+            div[id*="reel"] {
+                position: absolute;
+                border: 1px solid black;
+                margin: auto;
+                height: 398px;
+                width: 25%;
+                overflow: hidden;
+                background-color: black;
+                canvas {
+                    position: relative;
+                    top: -311px;
+                }
+            }
+            div#reel-left {
+                left: 104px;
+            }
+            div#reel-right {
+                right: 104px;
+            }
+            div#reel-middle {
+                left: 0;
+                right: 0;
+            }
+            label.pay-line-tag {
+                color: green;
+                position: absolute;
+                font-weight: bold;
+                left: -85px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 15px;
+            }
+            div.pay-line-inducator {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                height: 0px;
+                opacity: 0.4;
+                border: 2px solid green;
+            }
+        }
+    }
+    //style for button panel;
+    div.button-panel-wrapper {
+        position: relative;
+        border: 1px solid white;
+        padding: 1em;
+        margin-top: 20px;
+        border-radius: 20px;
+        background: @color-button-panel;
+        
+        ul {
+            list-style-type: none;
+            li {
+                display: inline-block;
+                padding: 1em;
+                border-radius: 35px;
+                font-weight: 800;
+                background-color: white;
+                cursor: pointer;
+            }
+            li:hover {
+                background-color: @color-button-panel-hover;
+            }
+            li.spin-button {
+                min-height: 50px;
+                min-width: 50px;
+                text-align: center;
+                line-height: 50px;
+                position: absolute;
+                color: white;
+                background-color: @color-button-spin;
+                right: 20px;
+                top: 15px;
+                cursor: pointer;
+            }
+            li.spin-button:hover {
+                background-color: @color-button-spin-hover;
+            }
+        }
+    }
+}
