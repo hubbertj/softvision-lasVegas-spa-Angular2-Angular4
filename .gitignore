@@ -1,4 +1,7 @@
 #files_system
 .DS_Store
 
+#NPM
+node_modules
+
 
