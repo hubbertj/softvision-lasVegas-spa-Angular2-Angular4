@@ -6,7 +6,8 @@ define([], function() {
         routes: {
             "": "defaultRoute",
             "/": "defaultRoute",
-            "slotview": "slotview"
+            "slotview": "slotview",
+            "about": "about"
         },
 
         defaultRoute: function() {
@@ -15,6 +16,10 @@ define([], function() {
 
         slotview: function() {
             this.goToPage('slotview');
+        },
+
+        about: function(){
+            this.goToPage('about');
         },
 
         goToPage: function(page) {
