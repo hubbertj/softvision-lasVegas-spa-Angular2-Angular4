@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="container col-12">
+    <form role="form" name="add-note-form" #addNoteForm (ngSubmit)="onAddNote()" validate>
+      <div class="form-group">
+        <label for="exampleTextarea">New Note</label>
+        <textarea class="form-control" id="exampleTextarea" rows="5" [(ngModel)]="newNote" name="new-note"></textarea>
+      </div>
+      <div class="">
+      	<button type="submit" class="btn btn-primary float-right">&nbsp;+&nbsp;</button>
+      </div>
+    </form>
+  </div>
+</div>
