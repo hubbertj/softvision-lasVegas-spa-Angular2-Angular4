@@ -1,3 +1,19 @@
-<p>
-  view-list works!
-</p>
+<div class="row">
+  <div class="container col-12">
+    <form role="form" name="add-note-form" #addNoteForm (ngSubmit)="onAddNote()" validate>
+      <div class="form-group row">
+        <label for="example-search-input" class="col-2 col-form-label">Name:</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="note-name" id="noteName" placeholder="name" [(ngModel)]="aNote.name"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleTextarea">Note:</label>
+        <textarea class="form-control" id="exampleTextarea" rows="5" [(ngModel)]="aNote.text" name="new-note" placeholder="text"></textarea>
+      </div>
+      <div class="">
+        <button type="submit" class="btn btn-primary float-right">update</button>
+      </div>
+    </form>
+  </div>
+</div>

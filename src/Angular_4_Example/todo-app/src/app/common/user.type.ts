@@ -1,5 +1,3 @@
-
-
 //simple user
 export class User {
     email: string;
@@ -7,5 +5,9 @@ export class User {
     constructor() { 
     	this.email = '';
     	this.password = '';
+  	};
+
+  	public copyInto(obj: any){
+  		console.log(obj);
   	};
 }

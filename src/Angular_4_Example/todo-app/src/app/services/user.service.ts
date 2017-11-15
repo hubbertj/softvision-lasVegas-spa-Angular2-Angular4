@@ -15,11 +15,11 @@ export class UserService {
   		let uuid = UUID.UUID();
   		localStorage.setItem('user', user.email);
   		localStorage.setItem('token', uuid);
-  		if(localStorage.getItem('token')){
-  			resolve(true);
-  		}else{
-  			reject('Something when wrong with login!');
-  		} 
-	});
+    		if(localStorage.getItem('token')){
+    			resolve(true);
+    		}else{
+    			reject('Something when wrong with login!');
+    		} 
+	  });
   };
 }
