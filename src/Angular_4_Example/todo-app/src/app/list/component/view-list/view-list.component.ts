@@ -21,8 +21,8 @@ export class ViewListComponent implements OnInit {
   	this.activatedRoute.params.subscribe((params: Params) => {
         let listId = params['listId'];
         this._apiService.getNote(listId)
-		      .then((notes) => {
-		        console.log(notes);
+		      .then((note) => {
+            console.log(note);
 		      });
       });
   };

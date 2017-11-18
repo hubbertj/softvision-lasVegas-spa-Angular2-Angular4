@@ -23,20 +23,22 @@ export class ApiService {
 	  });
   };
 
-  public getNote(note: Note){
+  public getNote(listId: number){
   	return new Promise((resolve, reject) => {
   		var notes = [];
   		if(localStorage.getItem('notes')){
   			var aNotes = JSON.parse(localStorage.getItem("notes"));
   			for(var x in aNotes){
-  				let note = new Note();
-				note.copyInto(aNotes[x]);
-  				notes.push(note);
+          console.log(listId);
+          if(aNotes[x].id === listId){
+            let n = new Note();
+            n.copyInto(aNotes[x]);
+            resolve(n);
+            break;
+          }
   			}
-  			resolve(notes); 
     	}
-  		console.log(note);
-  		resolve(true);
+  		resolve(new Note());
   	});
   };
 
